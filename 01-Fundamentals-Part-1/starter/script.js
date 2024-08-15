@@ -1,5 +1,4 @@
-let js = "amazing"
-console.log(40 + 8 + 23 - 10);
+let js = "amazing";
+if (js === "amazing") alert("Javascript is fun");
 
-let myFirstName = "Seano"
-console.log(myFirstName)
+console.log(21 + 22 + 19);
