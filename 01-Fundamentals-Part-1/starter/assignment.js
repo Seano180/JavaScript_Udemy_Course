@@ -29,7 +29,7 @@ console.log(typeof language);
 
 // Try to change one of the changed variables now, and observe what happens.
 language = "English";
-const cntry = "Australia";
+const cuntry = "Australia";
 const cont = "Oceana";
 let island = false;
 island = true;
