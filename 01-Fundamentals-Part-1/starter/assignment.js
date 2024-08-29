@@ -4,7 +4,7 @@
 // Log their values to the console.
 const country = "Australia";
 const continent = "Oceana";
-const population = 25000000;
+let population = 25000000;
 
 console.log(country);
 console.log(continent);
@@ -15,12 +15,12 @@ console.log(population);
 
 // Log the types of isIsland, population, country and language to the console.
 const isIsland = false;
-const language;
+// let language;
 
-console.log(typeof isIsland);
-console.log(typeof population);
-console.log(typeof country);
-console.log(typeof language);
+// console.log(typeof isIsland);
+// console.log(typeof population);
+// console.log(typeof country);
+// console.log(typeof language);
 
 // **** Let, Const and Var - Lecture 12 ****
 // Set the value of language to the language spoken where you live (some countries have multiple languages, but just choose one).
@@ -28,13 +28,13 @@ console.log(typeof language);
 // Think about which variables should be const variables (which values will never change, and which might change?). Then, change these variables to const.
 
 // Try to change one of the changed variables now, and observe what happens.
-language = "English";
+const language = "English";
 const cuntry = "Australia";
 const cont = "Oceana";
-const island = false;
-island = true;
-console.log(cont);
-console.log(island);
+// const island = false;
+// island = true;
+// console.log(cont);
+// console.log(island);
 
 // **** Basic Operators - Lecture 13 ****
 // If your country split in half, and each half would contain half the population, then how many people would live in each half?
@@ -57,7 +57,8 @@ const description1 =
   continent +
   " and its " +
   population +
-  " million people speak Australian";
+  " million people speak " +
+  language;
 console.log(description1);
 
 // **** Coding Challenge #1 ****
@@ -88,3 +89,10 @@ console.log(bmiMark, bmiJohn);
 
 markHigherBMI = bmiMark > bmiJohn;
 console.log(markHigherBMI);
+
+// **** Strings and Template Literals - Tutorial 17 ****
+// Recreate the description variable from the last assignment, this time using the template literal syntax.
+
+console.log(
+  `${country} is in ${continent} and it's ${population} million people speak ${language}`
+);
