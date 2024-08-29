@@ -9,7 +9,7 @@ let age = 30;
 age = 31;
 console.log(age);
 
-const birthYear = 2022;
+const birthYear = 1987;
 console.log(birthYear);
 
 // Math Operators - Tutorial 13
@@ -34,3 +34,30 @@ console.log(x);
 
 // Comparison Operators - Tutorial 13
 console.log(ageSean > ageRheanna); // >, <. >=, <=
+
+// Strings & Template Literals - Tutorial 17
+const job = "Student";
+
+console.log(
+  "I'm " +
+    firstName +
+    " and I am " +
+    ageSean +
+    " years old and my job is a " +
+    job
+); // this is a very old way of doing things in JavaScript, the new ES6 makes this easier
+
+const seanNew = `I'm ${firstName} and I am ${ageSean} years old and my job is a ${job} -- This string method uses Template Literals which is new in ES6`;
+
+console.log(seanNew);
+
+// old method using quotation marks
+console.log(
+  "String with \n\
+  multiple \n\
+  lines"
+);
+// new method using back ticks - ES6 onwards
+console.log(`Sring with
+  multiple
+  lines`);
