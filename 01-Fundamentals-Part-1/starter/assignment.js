@@ -2,9 +2,9 @@
 // Declare variables called country, continent and population and assign their values according to your own country (population in millions).
 
 // Log their values to the console.
-let country = "Australia";
-let continent = "Oceana";
-let population = 25000000;
+const country = "Australia";
+const continent = "Oceana";
+const population = 25000000;
 
 console.log(country);
 console.log(continent);
@@ -14,8 +14,8 @@ console.log(population);
 // Declare a variable called isIsland and set its value according to your country. The variable should hold a Boolean value. Also declare a variable language, but don't assign it any value yet.
 
 // Log the types of isIsland, population, country and language to the console.
-let isIsland = false;
-let language;
+const isIsland = false;
+const language;
 
 console.log(typeof isIsland);
 console.log(typeof population);
@@ -31,7 +31,7 @@ console.log(typeof language);
 language = "English";
 const cuntry = "Australia";
 const cont = "Oceana";
-let island = false;
+const island = false;
 island = true;
 console.log(cont);
 console.log(island);
@@ -59,3 +59,32 @@ const description1 =
   population +
   " million people speak Australian";
 console.log(description1);
+
+// **** Coding Challenge #1 ****
+// Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / (height * height) (mass in kg and height in meters).
+
+// Your task is to write some code to help them:
+
+// Store Mark's and John's mass and height in variables called massMark, heightMark, massJohn and heightJohn.
+
+// Calculate both their BMIs using the formula, and store the results in two variables called BMIMark and BMIJohn.
+
+// Log the value of BMIMark and BMIJohn to the console.
+
+// BONUS: Create a boolean variable markHigherBMI containing information about whether Mark has a higher BMI than John. Log it to the console too
+
+// TEST DATA 1: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
+
+// TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 95;
+const heightJohn = 1.88;
+
+const bmiMark = massMark / (heightMark * heightMark);
+const bmiJohn = massJohn / (heightJohn * heightJohn);
+console.log(bmiMark, bmiJohn);
+
+markHigherBMI = bmiMark > bmiJohn;
+console.log(markHigherBMI);
