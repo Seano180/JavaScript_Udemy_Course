@@ -1,3 +1,4 @@
+console.log("⭐️⭐️⭐️⭐️⭐️⭐️ Start of Script.js script ⭐️⭐️⭐️⭐️⭐️");
 let js = "amazing";
 // if (js === "amazing") alert("Javascript is fun");
 
@@ -81,3 +82,19 @@ if (birthYear <= 2000) {
   century = 21;
 }
 console.log(`You were born in the ${century}th century.`);
+
+// Type Conversion - Tutorial 20
+const inputYear = "1991"; // this logs 1991 as a string not a number
+console.log(Number(inputYear), inputYear); // this compares the conversion number to the string
+console.log(Number(inputYear) + 18); // this conversion results in numbers that can be added
+
+console.log(Number("Seano")); // result = NaN
+console.log(typeof NaN); // result = number (NaN is considered a number)
+
+console.log(String(23), 23); // result shows String versus number
+
+// Type Coercion - Tutorial 20
+console.log("I am " + 37 + " years old"); // JavaScript auto changes the number 37 to text
+console.log("23" - "10" - 3); // JavaScript converts "minus" to numbers, where as with "plus it adds the text string together"
+console.log("23" / "2"); // JavaScript will turn these strings to numbers because you cannot divide a string
+console.log("23" * "2"); // JavaScript will turn these strings to numbers because you cannot multiply a string
