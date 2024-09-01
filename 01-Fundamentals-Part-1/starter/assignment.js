@@ -80,15 +80,15 @@ console.log(description1);
 
 const massMark = 78;
 const heightMark = 1.69;
-const massJohn = 95;
-const heightJohn = 1.88;
+const massJohn = 92;
+const heightJohn = 1.95;
 
 const bmiMark = massMark / (heightMark * heightMark);
 const bmiJohn = massJohn / (heightJohn * heightJohn);
 console.log(bmiMark, bmiJohn);
 
 markHigherBMI = bmiMark > bmiJohn;
-console.log(markHigherBMI);
+console.log(markHigherBMI); // Boolean value = "true"
 
 // **** Strings and Template Literals - Tutorial 17 ****
 // Recreate the description variable from the last assignment, this time using the template literal syntax.
@@ -106,4 +106,28 @@ if (population > 33000000) {
   console.log(`Australia's population is ${popRemaining} below average`);
 } else {
   console.log("Your population must continue to grow");
+}
+
+// **** Coding Challenge #2 ****
+// Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+
+// 1. Print a nice output to the console, telling the user who has the higher BMI. The message can be either:
+
+// "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!".
+
+// 2. Modify the outputs above to use template literals to include the BMI values in the outputs.
+
+// Example: "Mark's BMI (28.3) is higher than John's (23.9)!" or "John's BMI (29.1) is higher than Mark's (27)!".
+
+// Note: Don't round the BMI values. Leave them as they are.
+if (bmiMark > bmiJohn) {
+  const bmiDifference1 = bmiMark - bmiJohn;
+  console.log(
+    `Mark's BMI is ${bmiDifference1} higher than John's BMI of ${bmiJohn}`
+  );
+} else {
+  const bmiDifference2 = bmiJohn - bmiMark;
+  console.log(
+    `John's BMI is ${bmiDifference2} lower than Mark's BMI of ${bmiMark}`
+  );
 }
