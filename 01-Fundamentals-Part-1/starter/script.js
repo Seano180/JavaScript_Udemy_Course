@@ -61,3 +61,23 @@ console.log(
 console.log(`Sring with
   multiple
   lines`);
+
+// Taking Decisions: If / Else Statements - Tutorial 18
+const drivingAge = 15;
+
+if (drivingAge >= 18) {
+  console.log("Sarah can start driving 🥰");
+} else {
+  const yearsLeft = 18 - drivingAge;
+  console.log(
+    `Sarah is not old enough to drive. Please wait ${yearsLeft} years to drive 😇.`
+  );
+}
+// Example using birthYear defined above, the below is just for visualisation
+// const birthYear = 1987;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(`You were born in the ${century}th century.`);
