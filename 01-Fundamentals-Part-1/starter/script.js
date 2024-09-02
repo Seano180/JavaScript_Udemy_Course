@@ -117,4 +117,12 @@ if (money) {
   console.log("You have no money, get a job 😂");
 }
 
-// ** the 5 Truthy values are:
+// Equality Operators: == vs. === - Tutorial 22
+
+// == is a Comparison Operator that performs Conversion & Coercion ** AVOID USING THIS OPERATOR
+// === is the STRICT Comparison Operator ** USE THIS OPERATOR THE MOST **
+
+const ages = 18;
+if (ages === 18) {
+  console.log("You are an adult");
+}
