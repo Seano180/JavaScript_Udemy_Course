@@ -132,3 +132,11 @@ if (bmiMark > bmiJohn) {
     `John's BMI is ${bmiDifference2} lower than Mark's BMI of ${bmiMark}`
   );
 }
+
+// **** Type Conversion and Coercion - Tutorial 20
+// Predict the result of these 5 operations without executing them:
+console.log("9" - "5"); // -> ? answer = 4
+console.log("19" - "13" + "17"); // -> ? answer = 617
+console.log("19" - "13" + 17); // -> ? answer = 23
+console.log("123" < 57); // -> ? answer = false
+console.log(5 + 6 + "4" + 9 - 4 - 2); // -> ? answer = 1143
