@@ -98,3 +98,23 @@ console.log("I am " + 37 + " years old"); // JavaScript auto changes the number 
 console.log("23" - "10" - 3); // JavaScript converts "minus" to numbers, where as with "plus it adds the text string together"
 console.log("23" / "2"); // JavaScript will turn these strings to numbers because you cannot divide a string
 console.log("23" * "2"); // JavaScript will turn these strings to numbers because you cannot multiply a string
+
+// Truthy & Falsy values - Tutorial 21
+// ** the 5 Falsy values are: 0, "", undefined, null, NaN
+
+console.log(Boolean(0)); //JavaScript sees the number 0 as false when using Boolean (this is relevant for the if statement below)
+console.log(Boolean(undefined));
+console.log(Boolean("Seano"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+//example IF statement - to prove that the number 0 = false
+const money = 0;
+// JavaScript will try to convert money to Boolean, in this case 0 = false
+if (money) {
+  console.log("Dont spend it all");
+} else {
+  console.log("You have no money, get a job 😂");
+}
+
+// ** the 5 Truthy values are:
