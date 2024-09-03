@@ -131,3 +131,35 @@ if (ages === 18) {
 // AND requires both variables to be true, otherwise it will result in a false
 // OR requires both variables to be false to result in false, otherwise it will always result in true
 // ** There was no code required for this tutorial **
+
+// Logical Operators - Tutorial 24
+const hasDriversLicense = true; //Variable "A"
+const hasGoodVision = true; //Variable "B"
+// && = AND
+console.log(hasDriversLicense && hasGoodVision); // This will result in TRUE
+// || = OR
+console.log(hasDriversLicense || hasGoodVision); // This will result in TRUE
+// ! = NOT
+console.log(!hasDriversLicense); // This will result in FALSE
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (shouldDrive) {
+//   console.log("Sarah is able to drive");
+// } else {
+//   console.log("Someone else should drive...");
+// }
+
+const isTired = true; //Variable "C"
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log("Sarah is able to drive!");
+} else {
+  console.log("Someone else should drive...");
+}
+
+// has drivers = true
+// has good vision = true
+// is tired = true, but we use the NOT function which makes it false
+// ANSWER: "Someone else should drive"
