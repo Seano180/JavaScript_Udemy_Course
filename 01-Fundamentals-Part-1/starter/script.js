@@ -126,3 +126,8 @@ const ages = 18;
 if (ages === 18) {
   console.log("You are an adult");
 }
+
+// Boolean Logic - Tutorial 23
+// AND requires both variables to be true, otherwise it will result in a false
+// OR requires both variables to be false to result in false, otherwise it will always result in true
+// ** There was no code required for this tutorial **
