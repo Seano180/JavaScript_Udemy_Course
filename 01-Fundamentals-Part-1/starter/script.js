@@ -158,8 +158,49 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
   console.log("Someone else should drive...");
 }
-
 // has drivers = true
 // has good vision = true
 // is tired = true, but we use the NOT function which makes it false
 // ANSWER: "Someone else should drive"
+
+// **** The Switch Statement - Tutorial 26 ****
+const day = "thursday";
+
+switch (day) {
+  case "monday": // day === "monday"
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break;
+  case "tuesday":
+    console.log("Prepare theory videos");
+    break;
+  case "wednesday": // on Wed & Thurs we write code examples
+  case "thursday":
+    console.log("Write code examples");
+    break;
+  case "friday":
+    console.log("Record videos");
+    break;
+  case "saturday": // on Sat & Sun we enjoy the weekend
+  case "sunday":
+    console.log("Enjoy the weekend :D");
+  default:
+    console.log("Not a valid day!");
+}
+// Now write the above using an IF / ELSE statement
+if (day === "monday") {
+  console.log("Plan course structure");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+  // here we use the "OR" operator
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Write code examples");
+} else if (day === "friday") {
+  console.log("Record videos");
+  // here we use the "OR" operator
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend :D");
+} else {
+  console.log("Not a valid day!");
+}

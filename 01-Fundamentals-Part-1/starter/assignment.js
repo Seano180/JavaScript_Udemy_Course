@@ -220,6 +220,7 @@ if (scoreDolphins > scoreKoalas) {
 // BONUS CODING CHALLENGE (Coding Challenge #3)
 // Include a requirement for a minimum score of 100
 // A team only wins if it has a higher score than the other team and its score is > 100
+// If BOTH teams score equal points and are both > 100, then it is a draw
 // HINT: Use Logical Operators
 if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
   console.log("Dolphins beat the Koala's and scored above 100 🏆");
@@ -233,4 +234,33 @@ if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
   console.log("Both teams win the trophy 🙂");
 } else {
   console.log("No team wins the trophy 😭");
+}
+
+// **** The Switch Statement - Tutorial 26 ****
+// Use a switch statement to log the following string for the given language:
+// chinese or mandarin: 'MOST number of native speakers!';
+// spanish: '2nd place in number of native speakers';
+// english: '3rd place'; <----- using already defined language variable ABOVE
+// hindi: 'Number 4';
+// arabic: '5th most spoken language';
+// for all other simply log 'Great language too :D'.
+switch (language) {
+  case "chinese":
+  case "mandarin":
+    console.log("MOST number of native speakers!");
+    break;
+  case "spanish":
+    console.log("2nd place in number of native speakers");
+    break;
+  case "English":
+    console.log("3rd place");
+    break;
+  case "hindi":
+    console.log("Number 4");
+    break;
+  case "arabic":
+    console.log("5th most spoken language");
+    break;
+  default:
+    console.log("Great language too :D");
 }
