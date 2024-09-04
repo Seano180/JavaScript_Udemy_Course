@@ -216,3 +216,21 @@ if (scoreDolphins > scoreKoalas) {
 } else {
   console.log("Both Dolphin's & Koala's win the trophy 🏆");
 }
+
+// BONUS CODING CHALLENGE (Coding Challenge #3)
+// Include a requirement for a minimum score of 100
+// A team only wins if it has a higher score than the other team and its score is > 100
+// HINT: Use Logical Operators
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+  console.log("Dolphins beat the Koala's and scored above 100 🏆");
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+  console.log("Koala's beat the Dolphins and scored above 100 🏆");
+} else if (
+  scoreDolphins === scoreKoalas &&
+  scoreDolphins >= 100 &&
+  scoreKoalas >= 100
+) {
+  console.log("Both teams win the trophy 🙂");
+} else {
+  console.log("No team wins the trophy 😭");
+}
