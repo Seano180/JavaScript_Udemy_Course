@@ -204,3 +204,14 @@ if (day === "monday") {
 } else {
   console.log("Not a valid day!");
 }
+
+// **** The Conditional (Ternary) Operator - Tutorial 28 ****
+// This is the shortened way to write an IF / ELSE statement
+
+const ageOld = 23;
+ageOld >= 18
+  ? console.log("I like to drink 🍷") // ? = IF
+  : console.log("I like to drink 💧"); // : = Else
+// The above can be simplified even further
+const drink = ageOld >= 18 ? "wine 🍷" : "water 💧";
+console.log(drink);
