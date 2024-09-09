@@ -43,6 +43,21 @@ console.log(age1);
 const calcAge2 = function (birthYear) {
   return 2024 - birthYear;
 };
-
 const age2 = calcAge2(1987);
 console.log(age2);
+
+// **** Arrow Functions - Tutorial 35 ****
+// below is a single parameter arrow function
+const calcAge3 = (birthYear) => 2024 - birthYear;
+const age3 = calcAge3(1987);
+console.log(age3);
+
+// below is a multi parameter function using arrow function method
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2024 - birthYear;
+  const retirement = 70 - age;
+  return `${firstName} can retire in ${retirement} years`;
+};
+
+console.log(yearsUntilRetirement(1987, "Seano"));
+console.log(yearsUntilRetirement(1993, "Rheanna"));
