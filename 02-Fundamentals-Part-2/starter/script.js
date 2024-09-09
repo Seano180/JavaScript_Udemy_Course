@@ -28,3 +28,21 @@ console.log(appleJuice);
 
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
+
+// **** Function Declarations vs. Expressions - Tutorial 34 **** /
+// There are 2 types of ways to write functions
+
+// Function Declaration method
+function calcAge1(birthYear) {
+  return 2024 - birthYear;
+}
+const age1 = calcAge1(1987);
+console.log(age1);
+
+// Function Expression method // Jonas preferred method so he can keep all the "const" variables up the top of his code, to make it clean
+const calcAge2 = function (birthYear) {
+  return 2024 - birthYear;
+};
+
+const age2 = calcAge2(1987);
+console.log(age2);
