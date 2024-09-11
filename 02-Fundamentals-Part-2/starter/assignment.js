@@ -77,3 +77,31 @@ const describePopulation = function (country, population) {
 describePopulation("Holland", 18000000);
 describePopulation("England", 56000000);
 describePopulation("Ireland", 5000000);
+
+// **** Coding Challenge 5 ****
+const calcAverage = (score1, score2, score3) => {
+  return (score1 + score2 + score3) / 3;
+};
+
+//Test Data 1
+let scoreDolphins1 = calcAverage(44, 23, 71);
+let scoreKoalas1 = calcAverage(65, 54, 49);
+console.log(scoreDolphins1, scoreKoalas1);
+
+//Test Data 2
+let scoreDolphins2 = calcAverage(85, 54, 41);
+let scoreKoalas2 = calcAverage(23, 34, 27);
+console.log(scoreDolphins2, scoreKoalas2);
+
+// Note -- team can only win if its score is DOUBLE the other teams score
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+  } else {
+    console.log("No team wins 🙂");
+  }
+};
+checkWinner(scoreDolphins1, scoreKoalas1); // Test Data 1
+checkWinner(scoreDolphins2, scoreKoalas2); // Test Data 2
