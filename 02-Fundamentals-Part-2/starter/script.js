@@ -75,3 +75,25 @@ const fruitProcessor = function (apples, oranges) {
 };
 
 console.log(fruitProcessor(2, 3));
+
+// Reviewing Functions - Tutorial 37 ****
+const calcAge = function (currentYear, birthYear) {
+  return currentYear - birthYear;
+};
+
+const yearsUntilRetirements = function (calcAge, firstName) {
+  const retirement = 70 - calcAge;
+  return `${firstName} is ${calcAge} years old ${
+    retirement > 0 ? `can retire in ${calcAge} years` : "has already retired 🎉"
+  }`;
+};
+
+// Calling the function method and storing the variables
+// **** Use this method as it alows you to change arguement inputs e.g. birthYear ****
+const finalAge = calcAge(2024, 1900);
+const retirementAge = yearsUntilRetirements(finalAge, "Rheanna");
+console.log(retirementAge);
+
+// Simply logging the function results to console
+console.log(yearsUntilRetirements(calcAge(2024, 1987), "Seano"));
+console.log(yearsUntilRetirements(calcAge(2024, 1950), "George"));
