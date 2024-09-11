@@ -68,10 +68,6 @@ console.log(malta3);
 
 // Call describePopulation with data for 3 countries of your choice.
 
-// const percentageOfWorld2 = function (population) {
-//   return (population / worldPopulation) * 100;
-// };
-
 const describePopulation = function (country, population) {
   const percentage = percentageOfWorld1(population);
   const description = `${country} has ${population} people, which is about ${percentage} of the world!`;
