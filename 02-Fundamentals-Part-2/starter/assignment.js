@@ -79,9 +79,7 @@ describePopulation("England", 56000000);
 describePopulation("Ireland", 5000000);
 
 // **** Coding Challenge 5 ****
-const calcAverage = (score1, score2, score3) => {
-  return (score1 + score2 + score3) / 3;
-};
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
 //Test Data 1
 let scoreDolphins1 = calcAverage(44, 23, 71);
@@ -105,3 +103,20 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 };
 checkWinner(scoreDolphins1, scoreKoalas1); // Test Data 1
 checkWinner(scoreDolphins2, scoreKoalas2); // Test Data 2
+
+// **** Introduction to Arrays - Tutorial 39 ****
+// Create an array containing 4 population values of 4 countries of your choice. You may use the values you have been using previously. Store this array into a variable called populations.
+
+// Log to the console whether the array has 4 elements or not (true or false).
+
+// Create an array called percentages containing the percentages of the world population for these 4 population values. Use the function percentageOfWorld1 that you created earlier to compute the 4 percentage values.
+const pop = [125000000, 6500000, 5500000, 23000000];
+console.log(pop.length === 4);
+
+const percentages = [
+  percentageOfWorld1(pop[0]),
+  percentageOfWorld1(pop[1]),
+  percentageOfWorld1(pop[2]),
+  percentageOfWorld1(pop[3]),
+];
+console.log(percentages);
