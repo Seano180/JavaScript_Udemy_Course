@@ -97,3 +97,23 @@ console.log(retirementAge);
 // Simply logging the function results to console
 console.log(yearsUntilRetirements(calcAge(2024, 1987), "Seano"));
 console.log(yearsUntilRetirements(calcAge(2024, 1950), "George"));
+
+// **** Introduction to Arrays - Tutorial 39 ****
+const friends = ["Seano", "Rheanna", "Shadow"];
+console.log(friends[1]);
+
+// Exercise
+const calcAges = function (birthYear) {
+  return 2024 - birthYear;
+};
+const years = [1987, 1993, 2010];
+
+// Option 1 to call an Array
+const ages1 = calcAges(years[0]);
+const ages2 = calcAges(years[1]);
+const ages3 = calcAges(years[2]);
+console.log(ages1, ages2, ages3);
+
+// Option 2 to call an Array **** Preferred method ****
+const ages = [calcAges(years[0]), calcAges(years[1]), calcAges(years[2])];
+console.log(ages);
