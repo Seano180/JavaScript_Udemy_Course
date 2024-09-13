@@ -117,3 +117,24 @@ console.log(ages1, ages2, ages3);
 // Option 2 to call an Array **** Preferred method ****
 const ages = [calcAges(years[0]), calcAges(years[1]), calcAges(years[2])];
 console.log(ages);
+
+// **** Basic Array Operations (Methods) - Tutorial 40 ****
+// push = add to back of array
+// unshift = add to front of array
+// pop = remove from back of array
+// shift = remove from front of array
+// indexOf = returns the position of that expression within the array
+// includes = returns (true/false) if that expression exists in the array -- note, this method uses strict equality and not type ceorcion e.g. "23" === 23 (false) string vs. number
+const friendz = ["Seano", "Rheanna", "Shadow"];
+
+friendz.push("Kippa");
+console.log(friendz);
+
+friendz.unshift("Pat");
+console.log(friendz);
+
+friendz.pop(); // no need to declare who to remove -- the end is always removed
+console.log(friendz);
+
+friendz.shift(); // no need to declare who to remove -- the front is always removed
+console.log(friendz);
