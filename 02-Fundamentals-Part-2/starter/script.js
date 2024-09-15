@@ -138,3 +138,14 @@ console.log(friendz);
 
 friendz.shift(); // no need to declare who to remove -- the front is always removed
 console.log(friendz);
+
+// **** Introduction to Objects - Tutorial 42 ****
+const seano = {
+  firstName: "Seano",
+  lastName: "Sheridan",
+  age: 2024 - 1987,
+  job: "Engineer",
+  friends: ["Rheanna", "Patrick", "Kippa"],
+};
+
+console.log(seano.job); // calls the specific object value pair
