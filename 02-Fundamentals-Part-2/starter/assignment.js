@@ -193,3 +193,17 @@ const myCountry = {
   population: 125000000,
   neighbours: ["Korea", "China", "Russia"],
 };
+
+// **** Dot vs. Bracket Notation - Tutorial 43 ****
+// Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki'.
+
+// Increase the country's population by two million using dot notation, and then decrease it by two million using bracket notation.
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language} speaking people, ${myCountry.neighbours.length} neighbouring countries and a captial called ${myCountry.capital}
+  `);
+
+// Increase and Decrease population using dot and bracket notation method
+myCountry.population = 127000000;
+console.log(myCountry.population);
+
+myCountry["population"] = 123000000;
+console.log(myCountry["population"]);
