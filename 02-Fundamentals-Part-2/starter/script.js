@@ -149,3 +149,41 @@ const seano = {
 };
 
 console.log(seano.job); // calls the specific object value pair
+
+// **** Dot vs. Bracket Notation - Tutorial 43 ****
+// Dot Notation
+console.log(seano.lastName);
+//Bracket Notation
+console.log(seano["lastName"]);
+
+// const interestedIn = prompt(
+//   "What do you want to know about Seano? Choose between firstName, lastName, age, job, friends"
+// );
+
+// if (seano[interestedIn]) {
+//   console.log(seano[interestedIn]);
+// } else {
+//   console.log("Wrong entry --", interestedIn, "is not a valid input");
+// }
+
+// Push new properties in to the Object
+seano.location = "Australia"; // Dot notation method
+seano["loc"] = "Australia"; // Bracket notation method
+console.log(seano);
+
+// Challenge - write the below
+// "Seano has 3 friends, and his best friend is called Patrick"
+
+// Using Expression method
+console.log(
+  seano.firstName,
+  "has",
+  seano.friends.length,
+  "friends, and his best friend is called",
+  seano.friends[1]
+);
+
+// Using Template literals
+console.log(
+  `${seano.firstName} has ${seano.friends.length} friends, and his best friend is called ${seano.friends[1]}`
+);
