@@ -183,3 +183,13 @@ console.log(bills, tips);
 // 4 - BONUS - create an array that totals the bills + tip
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(totals);
+
+// **** Introduction to Objects - Tutorial 42 ****
+// Create an object called myCountry for a country of your choice, containing properties country, capital, language, population and neighbours (an array like we used in previous assignments).
+const myCountry = {
+  country: "Japan",
+  capital: "Tokyo",
+  language: "Japanese",
+  population: 125000000,
+  neighbours: ["Korea", "China", "Russia"],
+};
