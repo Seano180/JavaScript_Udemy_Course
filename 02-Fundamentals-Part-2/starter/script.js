@@ -187,3 +187,30 @@ console.log(
 console.log(
   `${seano.firstName} has ${seano.friends.length} friends, and his best friend is called ${seano.friends[1]}`
 );
+
+// **** Object Methods - Tutorial 44 ****
+const seanoObject = {
+  firstName: "Seano",
+  lastName: "Sheridan",
+  birthYear: 1987,
+  job: "Engineer",
+  friends: ["Rheanna", "Patrick", "Kippa"],
+  hasDriversLicense: false,
+
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+  // Challenge
+  // Write a string that returns "Seano is a 37-year old Engineer, and he has a/no driver's license"
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      this.job
+    }, and he has ${
+      this.hasDriversLicense === true ? "a" : "no"
+    } driver's licence`;
+  },
+};
+
+console.log(seanoObject.calcAge());
+console.log(seanoObject.getSummary());
