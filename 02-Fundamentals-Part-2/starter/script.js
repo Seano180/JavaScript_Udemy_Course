@@ -214,3 +214,8 @@ const seanoObject = {
 
 console.log(seanoObject.calcAge());
 console.log(seanoObject.getSummary());
+
+// **** Iteration: The For Loop - Tutorial 46 ****
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repitition ${rep}`);
+}
