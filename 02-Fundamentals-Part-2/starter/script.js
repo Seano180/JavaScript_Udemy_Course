@@ -219,3 +219,18 @@ console.log(seanoObject.getSummary());
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repitition ${rep}`);
 }
+
+// **** Looping Arrays, Breaking and Continuing - Tutorial 47 ****
+const seanoArray = [
+  "Seano",
+  "Sheridan",
+  2024 - 1987,
+  "Engineer",
+  ["Rheanna", "Patrick", "Kippa"],
+];
+
+for (let i = 0; i < seanoArray.length; i++) {
+  console.log(seanoArray[i]);
+}
+
+

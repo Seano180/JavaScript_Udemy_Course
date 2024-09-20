@@ -287,3 +287,33 @@ console.log(`
 for (let voter = 1; voter <= 50; voter++) {
   console.log(`Voter number ${voter} is currently voting`);
 }
+
+// **** Looping Arrays, Break and Continue - Tutorial 47 ****
+// Let's bring back the populations array from a previous assignment.
+
+// Use a for loop to compute an array called percentages2 containing the percentages of the world population for the 4 population values. Use the function percentageWOrld1 that you created earlier.
+
+// Confirm that percentages2 contains exactly the same values as the percentages array that we created manually in the previous assignment, and reflect on how much better this solution is.
+
+const pop1 = [25000000, 11000000, 500000];
+const percentages1 = [];
+
+for (let i = 0; i < pop1.length; i++) {
+  const perc = percentageOfWorld1(pop1[i]);
+  percentages1.push(perc);
+}
+console.log(percentages1);
+
+// COMPARISON FUNCTION TO SHOW HOW MUCH EASIER A LOOP IS ABOVE
+
+// const worldPopulation = 7900000000;
+
+// function percentageOfWorld1(population) {
+//   return (population / worldPopulation) * 100;
+// }
+// const aussie1 = percentageOfWorld1(25000000);
+// console.log(aussie1);
+// const greece1 = percentageOfWorld1(11000000);
+// console.log(greece1);
+// const malta1 = percentageOfWorld1(500000);
+// console.log(malta1);
