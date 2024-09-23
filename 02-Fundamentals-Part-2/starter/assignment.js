@@ -317,3 +317,26 @@ console.log(percentages1);
 // console.log(greece1);
 // const malta1 = percentageOfWorld1(500000);
 // console.log(malta1);
+
+// **** Looping Backwards and Loops in Loops - Tutorial 48 ****
+// Store this array of arrays into a variable called listOfNeighbours:
+
+// [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+// Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country.
+
+// You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway 😉
+const listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+
+console.log(listOfNeighbours.length);
+
+for (let i = 0; i <= listOfNeighbours.length - 1; i++) {
+  console.log(listOfNeighbours[i]);
+
+  for (let y = 0; y < listOfNeighbours[i].length; y++) {
+    console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+  }
+}

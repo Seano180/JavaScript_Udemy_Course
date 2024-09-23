@@ -233,6 +233,18 @@ for (let i = 0; i < seanoArray.length; i++) {
   console.log(seanoArray[i]);
 }
 
-// **** Tutorial 48 ****
+// **** Looping Backwards and Loops in Loops - Tutorial 48 ****
 
+// Looping Backwards
+for (let i = seanoArray.length - 1; i >= 0; i--) {
+  console.log(seanoArray[i]);
+}
 
+// Loops in Loops
+for (let exercise = 1; exercise < 6; exercise++) {
+  console.log(`----- Starting Exercise ${exercise}`);
+
+  for (let reps = 1; reps <= 6; reps++) {
+    console.log(`Exercise ${exercise}: Lifting weight repitition ${reps}`);
+  }
+}
