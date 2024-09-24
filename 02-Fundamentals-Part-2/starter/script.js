@@ -248,3 +248,20 @@ for (let exercise = 1; exercise < 6; exercise++) {
     console.log(`Exercise ${exercise}: Lifting weight repitition ${reps}`);
   }
 }
+
+// **** The While Loop - Tutorial 49 ****
+// example of the gym weight reptition FOR loop, except using a While loop
+let reps = 1;
+while (reps <= 10) {
+  console.log(`Lifting more weights repitition ${reps}`);
+  reps++;
+}
+
+// example without a counter
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("The loop is about to end...");
+}
