@@ -288,7 +288,7 @@ for (let voter = 1; voter <= 50; voter++) {
   console.log(`Voter number ${voter} is currently voting`);
 }
 
-// **** Looping Arrays, Break and Continue - Tutorial 47 ****
+// **** Looping Arrays, Breaking and Continuing - Tutorial 47 ****
 // Let's bring back the populations array from a previous assignment.
 
 // Use a for loop to compute an array called percentages2 containing the percentages of the world population for the 4 population values. Use the function percentageWOrld1 that you created earlier.
@@ -340,3 +340,21 @@ for (let i = 0; i <= listOfNeighbours.length - 1; i++) {
     console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
   }
 }
+
+// **** The While Loop - Tutorial 49 ****
+// Recreate the challenge from the lecture Looping Arrays, Breaking and Continuing, but this time using a while loop (call the array percentages3).
+
+// Reflect on what solution you like better for this task: the for loop or the while loop?
+
+const pop3 = [25000000, 11000000, 500000];
+const percentages3 = [];
+
+let i = 0;
+
+while (i < pop3.length) {
+  const percents = percentageOfWorld1(pop3[i]);
+  percentages3.push(percents);
+  i++;
+}
+
+console.log(percentages3);
