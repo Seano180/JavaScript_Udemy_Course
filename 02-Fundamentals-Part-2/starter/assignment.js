@@ -358,3 +358,38 @@ while (i < pop3.length) {
 }
 
 console.log(percentages3);
+
+// **** Coding Challenge 8 ****
+//Step 1
+const billz = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+// Step 2
+let tipz = [];
+let totalz = [];
+
+// Step 3 - use the caclTip function we wrote before ***
+
+// const calcTips = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// };
+
+for (let i = 0; i < billz.length; i++) {
+  const tip1 = calcTip(billz[i]);
+  tipz.push(tip1);
+  totalz.push(billz[i] + tip1);
+}
+
+console.log(tipz);
+console.log(totalz);
+
+// BONUS
+const calcAverages = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum / arr.length;
+};
+console.log(calcAverages([2, 3, 7]));
+console.log(calcAverages(totalz));
+console.log(calcAverages(tipz));
