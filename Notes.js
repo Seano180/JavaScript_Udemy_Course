@@ -16,7 +16,7 @@ x--; // x = x - 1 (100)
 // >= greater than or equal to;
 // <= less than or equal to;
 
-// *** Tutorial 58 - Think and Solve problems like a developer ****
+// **** Tutorial 58 - Think and Solve problems like a developer ****
 // 1) Understand the problem - ask the right questions
 // 2) Break big problems in to smaller problems a.k.a milestones
 // 3) Dont be afraid to do as much research as we have to e.g. using StackOverflow, MDN docs, Google etc.
