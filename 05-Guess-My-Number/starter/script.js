@@ -19,7 +19,7 @@ let score = 20;
 
 const number = Math.trunc(Math.random() * 20 + 1);
 console.log(number);
-document.querySelector('.number').textContent = number;
+// document.querySelector('.number').textContent = number;
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -33,7 +33,7 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess === number) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
     document.querySelector('body').style.backgroundColor = 'green';
-
+    document.querySelector('.number').textContent = number;
     document.querySelector('.number').style.width = '30rem';
 
     // When guess is too high
@@ -62,4 +62,10 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.number').style.width = '30rem';
     }
   }
+});
+
+// **** Challenge ****
+// Reset the entire DOM back to the default
+document.querySelector('.again').addEventListener('click', function () {
+  location.reload();
 });
