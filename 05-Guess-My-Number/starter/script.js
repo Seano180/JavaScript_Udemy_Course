@@ -25,11 +25,18 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
 
+  // When there is no number input
   if (!guess) {
     document.querySelector('.message').textContent = '🚨 No number entered!';
+
+    // When guess is correct
   } else if (guess === number) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
-    document.body.style.backgroundColor = 'green';
+    document.querySelector('body').style.backgroundColor = 'green';
+
+    document.querySelector('.number').style.width = '30rem';
+
+    // When guess is too high
   } else if (guess > number) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'Guess is 📈 too High!';
@@ -38,8 +45,11 @@ document.querySelector('.check').addEventListener('click', function () {
     } else {
       document.querySelector('.message').textContent = 'Game Over ⛔️';
       document.querySelector('.score').textContent = 0;
-      document.body.style.backgroundColor = 'red';
+      document.querySelector('body').style.backgroundColor = '#D2042D';
+      document.querySelector('.number').style.width = '30rem';
     }
+
+    // When guess is too low
   } else if (guess < number) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'Guess is 📉 too Low!';
@@ -48,7 +58,8 @@ document.querySelector('.check').addEventListener('click', function () {
     } else {
       document.querySelector('.message').textContent = 'Game Over ⛔️';
       document.querySelector('.score').textContent = 0;
-      document.body.style.backgroundColor = 'red';
+      document.querySelector('body').style.backgroundColor = '#D2042D';
+      document.querySelector('.number').style.width = '30rem';
     }
   }
 });
