@@ -10,4 +10,4 @@ console.log(btnShowModal);
 
 for (let i = 0; i < btnShowModal.length; i++) {
   console.log(btnShowModal[i].textContent);
-}
+};
