@@ -6,17 +6,16 @@ const btnCloseModal = document.querySelector('.close-modal');
 
 const btnShowModal = document.querySelectorAll('.show-modal');
 
-console.log(btnShowModal);
+// console.log(btnShowModal);
 
-for (let i = 0; i < btnShowModal.length; i++) {
-  btnShowModal[i].addEventListener('click', function () {
-    console.log('Button clciked');
+const showModal = function () {
+  // the modal window was hidden using the class in the .HTML file which was defined in the CSS
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
 
-    // the modal window was hidden using the class in the .HTML file which was defined in the CSS
-    modal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
-  });
-}
+for (let i = 0; i < btnShowModal.length; i++)
+  btnShowModal[i].addEventListener('click', showModal);
 
 // Created the function below because closing modal by clicking the "X" or clicking outside of the modal, uses the same code
 const closeModal = function () {
@@ -29,3 +28,12 @@ btnCloseModal.addEventListener('click', closeModal);
 
 // function to remove the overlay and the modal window by clicking OUTSIDE of the modal window
 overlay.addEventListener('click', closeModal);
+
+// **** Tutorial 81 - Handling the ESC keypress
+document.addEventListener('keydown', function (event) {
+  console.log(event.key);
+
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
