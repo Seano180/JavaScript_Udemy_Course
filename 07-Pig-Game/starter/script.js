@@ -15,20 +15,26 @@ const buttonRoll = document.querySelector('.btn--roll');
 const buttonHold = document.querySelector('.btn--hold');
 const newGame = document.querySelector('.btn--new');
 
-//Start new game - by refreshing page
-newGame.addEventListener('click', function () {
-  location.reload();
-});
+let scores, currentScore, activePlayer, playing;
 
-score0Element.textContent = 0;
-score1Element.textContent = 0;
+const init = function () {
+  scores = [0, 0]; //player1 , player2
+  currentScore = 0;
+  activePlayer = 0;
+  playing = true; // to stop the game when a winner is selected
 
-diceElement.classList.add('hidden');
+  score0Element.textContent = 0;
+  score1Element.textContent = 0;
+  current0Element.textContent = 0;
+  current1Element.textContent = 0;
 
-const scores = [0, 0]; //player1 , player2
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true; // to stop the game when a winner is selected
+  diceElement.classList.add('hidden');
+  activePlayer0.classList.remove('player--winer');
+  activePlayer1.classList.remove('player--winer');
+  activePlayer0.classList.add('player--active');
+  activePlayer1.classList.remove('player--active');
+};
+init();
 
 const togglePlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -83,3 +89,11 @@ buttonHold.addEventListener('click', function () {
     }
   }
 });
+
+//Start new game - by refreshing page
+buttonNew.addEventListener('click', init);
+
+//Start new game - by refreshing page using full page reload
+// newGame.addEventListener('click', function () {
+//   location.reload();
+// });
