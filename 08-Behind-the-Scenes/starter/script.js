@@ -32,11 +32,11 @@ function calcAge(birthYear) {
       const string = `Oh, and you're a millenial, ${firstName}`;
       console.log(string);
 
-      function add(a, b) {
-        return a + b;
-      }
+      // function add(a, b) {
+      //   return a + b;
+      // }
     }
-    console.log(add(2, 3)); // this will work if we turn of "Use Strict"
+    // console.log(add(2, 3)); // this will work if we turn of "Use Strict"
   }
   printAge();
 
@@ -45,3 +45,29 @@ function calcAge(birthYear) {
 
 const firstName = 'Seano';
 calcAge(1987);
+
+// **** Tutorial 95 - Hoisting and TDZ in Practice ****
+
+// Hoisting with variables
+console.log(me);
+// console.log(job);
+// console.log(year);
+
+var me = 'Seano';
+let job = 'Student';
+const year = 1987;
+
+// Hoisting with Functions
+console.log(addDeclaration(2, 3));
+console.log(addExpression(2, 3));
+console.log(addArrow(2, 3));
+
+function addDeclaration(a, b) {
+  return a + b;
+}
+
+const addExpression = function (a, b) {
+  return a + b;
+};
+
+const addArrow = (a, b) => a + b;
