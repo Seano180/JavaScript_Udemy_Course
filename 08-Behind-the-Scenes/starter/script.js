@@ -105,3 +105,16 @@ matilda.calcAges();
 
 const f = seano.calcAges;
 f();
+
+// **** Regular vs. Arrow Functions - Tutorial 98 ****
+
+const seanos = {
+  firstName: 'Seano',
+  year: 1987,
+  calcAgez: function () {
+    console.log(this);
+    console.log(2024 - this.year);
+  },
+  greet: () => console.log(`Hey ${this.firstName}`),
+};
+seanos.calcAgez();
