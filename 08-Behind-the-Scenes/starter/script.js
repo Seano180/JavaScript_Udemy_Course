@@ -58,16 +58,50 @@ let job = 'Student';
 const year = 1987;
 
 // Hoisting with Functions
-console.log(addDeclaration(2, 3));
-console.log(addExpression(2, 3));
-console.log(addArrow(2, 3));
+// console.log(addDeclaration(2, 3));
+// console.log(addExpression(2, 3));
+// console.log(addArrow(2, 3));
 
-function addDeclaration(a, b) {
-  return a + b;
-}
+// function addDeclaration(a, b) {
+//   return a + b;
+// }
 
-const addExpression = function (a, b) {
-  return a + b;
+// const addExpression = function (a, b) {
+//   return a + b;
+// };
+
+// const addArrow = (a, b) => a + b;
+
+// **** This Keyword in Practice - Tutorial 97 ****
+console.log(this);
+
+const calcAges = function (birthYear) {
+  console.log(2024 - birthYear);
+  console.log(this);
 };
+calcAges(1987);
 
-const addArrow = (a, b) => a + b;
+const calcAgeArrow = birthYear => {
+  console.log(2024 - birthYear);
+  console.log(this);
+};
+calcAgeArrow(1987);
+
+const seano = {
+  year: 1987,
+  calcAges: function () {
+    console.log(this);
+  },
+};
+seano.calcAges();
+
+// Method borrowing
+const matilda = {
+  year: 2016,
+};
+matilda.calcAges = seano.calcAges;
+matilda.calcAges();
+// console.log(matilda);
+
+const f = seano.calcAges;
+f();
