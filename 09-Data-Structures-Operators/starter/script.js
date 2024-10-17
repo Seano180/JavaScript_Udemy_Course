@@ -35,6 +35,11 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+  orderPasta: function (ingredient1, ingredient2, ingredient3) {
+    console.log(
+      `Here is your delicious pasta with ingredients ${ingredient1}, ${ingredient2} and ${ingredient3}`
+    );
+  },
 };
 restaurant.orderDelivery({
   time: '22:30',
@@ -77,3 +82,44 @@ const {
 } = hours;
 
 console.log(open, close);
+
+// **** The Spread Operator - Tutorial 106 ****
+
+// adding new elements to an existing array <-- this was pre-ES6
+const array = [7, 8, 9];
+console.log(array);
+
+const badNewArray = [1, 2, array[0], array[1], array[2]];
+console.log(badNewArray);
+
+// adding new elements to an existing array <-- Current method (Spread Operator)
+const newArray = [1, 2, ...array];
+console.log(newArray);
+
+// add a new food to the existing menu
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+// copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+
+// join arrays together
+const joinArray = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(joinArray);
+
+// Real world example
+// const ingredients = [
+//   prompt('Lets make pasta! ingredient 1?'),
+//   prompt('Lets make pasta! ingredient 2?'),
+//   prompt('Lets make pasta! ingredient 3?'),
+// ];
+
+// console.log(ingredients);
+
+// restaurant.orderPasta(...ingredients);
+
+// Create a new Object using an existing Object and the spread operator
+const newRestaurant = { ...restaurant, owner: 'Seano' };
+console.log(newRestaurant);
+console.log(restaurant);
