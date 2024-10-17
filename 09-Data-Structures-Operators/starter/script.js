@@ -40,6 +40,9 @@ const restaurant = {
       `Here is your delicious pasta with ingredients ${ingredient1}, ${ingredient2} and ${ingredient3}`
     );
   },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient, otherIngredients);
+  },
 };
 restaurant.orderDelivery({
   time: '22:30',
@@ -123,3 +126,41 @@ console.log(joinArray);
 const newRestaurant = { ...restaurant, owner: 'Seano' };
 console.log(newRestaurant);
 console.log(restaurant);
+
+// **** Rest Pattern and Paramaters - Tutorial 107 ****
+
+// ** Destructuring
+// SPREAD, because it is on the RIGHT side of the =
+const arr = [1, 2, ...[3, 4]];
+
+// REST, because it is on the LEFT side of the =
+const [x, y, ...others] = [1, 2, 3, 4, 5];
+console.log(x, y, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+
+// Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// ** Functions
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2, 3);
+add(4, 5, 6, 7, 8);
+add(3, 6, 5, 7, 4, 2);
+
+// restaurant example using the Rest pattern
+restaurant.orderPizza('mushrooms', 'onion', 'olives');
+
+// NOTE: SPREAD is the opposite of REST
