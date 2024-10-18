@@ -204,3 +204,35 @@ restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 restaurant.numGuests = 0;
 const guestsCorrect = restaurant.numGuests ?? 10;
 console.log(guestsCorrect);
+
+// **** Logical Assignment Operators - Tutorial 110 ****
+const rest1 = {
+  name: 'Capri',
+  numGuests: 20,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+// creating a short circuit to push the numGuests value in to the rest2
+rest2.numGuests = rest2.numGuests || 10;
+console.log(rest2);
+
+// the below is the same as the above, similar to the += operators
+rest1.numGuests ||= 10;
+console.log(rest1);
+
+// logical nullish operator
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+console.log(rest1);
+console.log(rest2);
+
+// replace the owner with anonymous
+rest2.owner = rest2.owner && '<Anonymous>';
+console.log(rest2);
+
+// making the above shorter
+rest2.owner &&= '*Anonymous*';
+console.log(rest2);
