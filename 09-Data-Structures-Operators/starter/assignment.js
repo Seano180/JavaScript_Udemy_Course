@@ -344,13 +344,3 @@ for (let i = 0; i < books.length; i++) {
       ` "${books[i].title}" ${books[i].onlineContent} provides online content`
     );
 }
-
-// **** The Nullish Coalescing Operator (??) - Tutorial 109 ****
-
-// 6.1
-for (let i = 0; i < books.length; i++) {
-  books[i].onlineContent ??
-    console.log(
-      `"${books[i].title}" provides NO data about its online content`
-    );
-}
