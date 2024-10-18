@@ -344,3 +344,27 @@ for (let i = 0; i < books.length; i++) {
       ` "${books[i].title}" ${books[i].onlineContent} provides online content`
     );
 }
+
+// **** Tutorial_109_Nullish_Operator
+
+// **** The Nullish Coalescing Operator (??) - Tutorial 109 ****
+
+// 6.1
+for (let i = 0; i < books.length; i++) {
+  books[i].onlineContent ??
+    console.log(
+      `"${books[i].title}" provides NO data about its online content`
+    );
+}
+
+// **** Logical Assignment Operators - Tutorial 110 ****
+
+// 7.1
+for (let i = 0; i < books.length; i++) {
+  console.log((books[i].edition ||= 1));
+}
+
+// 7.2
+for (let i = 0; i < books.length; i++) {
+  books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
+}
