@@ -196,3 +196,11 @@ restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 // OR returns the first truthy value, or the last truthy value if they are all falsy
 
 // AND returns the first falsy value, or last value if all are all truthy
+
+//
+// **** The Nullish Coalescing Operator (??) - Tutorial 109 ****
+
+// Nullish values are Null and Undefined - (does not include 0 or " ")
+restaurant.numGuests = 0;
+const guestsCorrect = restaurant.numGuests ?? 10;
+console.log(guestsCorrect);
