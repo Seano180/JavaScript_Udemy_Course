@@ -164,3 +164,35 @@ add(3, 6, 5, 7, 4, 2);
 restaurant.orderPizza('mushrooms', 'onion', 'olives');
 
 // NOTE: SPREAD is the opposite of REST
+
+// **** Short Circuiting && and || - Tutorials 108 ****
+
+// Use ANY data type, return ANY data type, and short-circuiting
+console.log(' ---- OR ----');
+
+console.log(3 || 'Seano'); // truthy
+console.log('' || 'Seano'); // falsy
+console.log(true || 0); // truthy
+console.log(undefined || null); // falsy
+
+// example
+const guests = restaurant.numGuests || 10; // numGuests doesnt exist, so this is a falsy value, therefore the OR operator will set 10 as the default
+console.log(guests);
+
+console.log(' ---- && ----'); // works in the OPPPOSITE way of the OR operator
+
+console.log(0 && 'Seano'); // && short circuits when the first value is falsy
+console.log('' && 'Seano'); // falsy
+console.log(true && 0); // truthy
+console.log(undefined && null); // falsy
+
+// exmaple
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+// *** IMPORTANT ***
+// OR returns the first truthy value, or the last truthy value if they are all falsy
+
+// AND returns the first falsy value, or last value if all are all truthy
