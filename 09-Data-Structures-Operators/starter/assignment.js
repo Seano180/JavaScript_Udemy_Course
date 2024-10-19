@@ -369,4 +369,4 @@ for (let i = 0; i < books.length; i++) {
   books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
 }
 
-// **** Challenge 1 - Tutorial 111 ****
+// ***** Challenge 1 - Tutorial 111 *****
