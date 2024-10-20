@@ -132,6 +132,7 @@ console.log(restaurant);
 // ** Destructuring
 // SPREAD, because it is on the RIGHT side of the =
 const arr = [1, 2, ...[3, 4]];
+console.log(arr);
 
 // REST, because it is on the LEFT side of the =
 const [x, y, ...others] = [1, 2, 3, 4, 5];
