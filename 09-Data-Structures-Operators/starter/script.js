@@ -237,3 +237,9 @@ console.log(rest2);
 // making the above shorter
 rest2.owner &&= '*Anonymous*';
 console.log(rest2);
+
+// **** Looping Arrays: The for-of Loop - Tutorial 112 ****
+// Lets loop through the menus
+const menuNew = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menuNew) console.log(item); // for of loop
