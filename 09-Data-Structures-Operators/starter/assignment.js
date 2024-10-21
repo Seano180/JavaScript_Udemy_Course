@@ -447,3 +447,34 @@ printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
 // 7. The team with the lower odd is more likely to win. Print to the console which team is more likely to win, WITHOUT using an if/else statement or the ternary operator.
 team1 < team2 && console.log('Team 1 is more likely to win');
 team2 < team1 && console.log('Team 2 is more likely to win');
+
+// **** Looping Arrays: The for-of Loop - Tutorial 112 ****
+
+// 8.1
+
+let pageSum = 0;
+
+for (let book of books) {
+  pageSum += book.pages;
+}
+
+console.log(pageSum);
+
+// 8.2
+const allAuthors = [];
+
+for (const book of books) {
+  if (typeof book.author === 'string') {
+    allAuthors.push(book.author);
+  } else {
+    for (const author of book.author) {
+      allAuthors.push(author);
+    }
+  }
+}
+console.log(allAuthors);
+
+// 8.3
+for (const [index, author] of allAuthors.entries()) {
+  console.log(`${index + 1}. ${author}`); // added the +1 here to make the index start at 1 instead of 0
+}
