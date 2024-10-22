@@ -478,3 +478,5 @@ console.log(allAuthors);
 for (const [index, author] of allAuthors.entries()) {
   console.log(`${index + 1}. ${author}`); // added the +1 here to make the index start at 1 instead of 0
 }
+
+// **** Enhanced Object Literals - Tutorial 113 ****
