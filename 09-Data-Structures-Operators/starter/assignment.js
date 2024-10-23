@@ -517,3 +517,32 @@ console.log(getFirstKeyword(books[0]));
 
 // example 2
 console.log(getFirstKeyword(newBook2));
+
+// **** Looping Objects: Object Keys, Values, and Entries - Tutorial 115 ****
+
+// 11.1 - Object Keys
+
+const entries1 = [];
+
+for (const key of Object.keys(books[0].thirdParty.goodreads)) {
+  entries1.push([key]);
+}
+
+console.log(entries1);
+
+// 11.2 - Object Values
+const prop = Object.values(books[0].thirdParty.goodreads);
+
+for (const [index, value] of prop.entries()) {
+  entries1[index].push(value);
+}
+console.log(entries1);
+
+// 11.3 - Object Entries
+const entries2 = Object.entries(books[0].thirdParty.goodreads);
+console.log(entries2);
+
+// 11.4 - Comparison of entries1 and entries2 (they should look the same)
+console.log(entries1);
+console.log(entries2);
+// and indeed, they DO look the same.
