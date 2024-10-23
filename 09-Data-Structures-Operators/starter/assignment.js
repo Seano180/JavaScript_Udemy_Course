@@ -506,3 +506,14 @@ const newBook2 = {
 };
 
 console.log(newBook2);
+
+// **** Optional Chaining (?.) - Tutorial 114 ****
+
+// example 1
+const getFirstKeyword = function (books) {
+  return books.keywords?.[0];
+};
+console.log(getFirstKeyword(books[0]));
+
+// example 2
+console.log(getFirstKeyword(newBook2));
