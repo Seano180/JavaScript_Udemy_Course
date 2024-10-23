@@ -267,3 +267,29 @@ const users = [
   },
 ];
 console.log(users[0]?.namez ?? 'User array empty');
+
+// **** Looping Objects: Object Keys, Values, and Entries - Tutorial 115 ****
+
+// Property NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openString = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openString += `${day},`;
+}
+console.log(openString);
+
+// Poprerty VALUES
+const values = Object.values(openingHours);
+console.log(values);
+
+// Object ENTRIES (Entire Object)
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+// Looping an Entire Object using the For Of loop and destructuring
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
