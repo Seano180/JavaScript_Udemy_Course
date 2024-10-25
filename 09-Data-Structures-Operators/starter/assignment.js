@@ -546,3 +546,53 @@ console.log(entries2);
 console.log(entries1);
 console.log(entries2);
 // and indeed, they DO look the same.
+
+// **** Tutorial 116 - Challenge 2 ****
+
+// 1. Loop over game.scored array and print each player name to the console, along with the goal number eg. "Goal 1: Lewandowski"
+
+for (const [index, player] of game.scored.entries()) {
+  console.log(`Goal ${index + 1}: ${player}`);
+}
+
+// 2. Use a Loop to calculate the average odd and log it to the console.
+let avg = 0;
+let totalavg = 0;
+
+for (const odd of Object.values(game.odds)) {
+  const total = (avg += odd);
+  totalavg = total / Object.values(game.odds).length;
+}
+console.log(totalavg);
+
+// Jonas solution for .2
+// const odds = Object.values(game.odds);
+// let avg = 0;
+
+// for (const odd of odds) avg += odd;
+// avg /= odds.length;
+// console.log(avg);
+
+// 3. Print the 3 odds to the console, but in a nice formatted way, exactly like this:
+// Odd of victory Bayern Munich: 1.33
+// Odd of draw: 3.25
+// Odd of victory Borrussia Dortmund: 6.5
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamString = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamString}: ${odd}`);
+}
+
+// BONUS - Create an Object called "scorers" which contains the names of the players who score as properties, and the number of goals as the value. It will look like this:
+// {
+//   Gnarby: 1,
+//   Hummels: 1,
+//   Lewandowski: 2
+// }
+
+// So the solution is to loop over the array, and add the array elements as object properties, and then increase the count as we encounter a new occurence of a certain element
+const scorers = {};
+for (const player of game.scored) {
+  scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+}
+
+console.log(scorers);
