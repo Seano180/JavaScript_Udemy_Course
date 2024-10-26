@@ -596,3 +596,34 @@ for (const player of game.scored) {
 }
 
 console.log(scorers);
+
+// **** Sets - Tutorial 117 ****
+
+// 12.1
+const allKeywords = [];
+
+for (const book of books) {
+  allKeywords.push(...book.keywords);
+}
+console.log(allKeywords);
+
+// 12.2 - remove duplicates from the above using sets
+const uniqueKeywords = new Set(allKeywords);
+console.log(uniqueKeywords);
+
+// 12.3 - add new words
+
+uniqueKeywords.add = 'science';
+uniqueKeywords.add = 'coding';
+console.log(uniqueKeywords);
+
+// 12.4 - delete business from the set
+uniqueKeywords.delete('business');
+console.log(uniqueKeywords);
+
+// 12.5 Create an array out of the uniqueKeywords set, and assign it to the uniqueKeywordsArr variable.
+const uniqueKeywordsArr = [...uniqueKeywords];
+
+// 12.6 Delete all items from the uniqueKeywords set.
+uniqueKeywords.clear();
+console.log(uniqueKeywords);
