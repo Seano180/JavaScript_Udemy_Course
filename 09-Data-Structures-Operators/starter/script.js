@@ -293,3 +293,42 @@ console.log(entries);
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
+
+// **** Sets - Tutorial 117 ****
+
+// sets require an iterable arguement - in this case, we pass in an aray
+// sets remove the duplicates and only show you what is available in the iterable
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pasta',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderSet);
+
+console.log(orderSet.size); // dont use .length for sets
+
+console.log(orderSet.has('Pizza')); //checks the set for this string
+
+orderSet.add('Garlic Bread'); // adds string in to the set - this is similar to "includes" for an array
+
+orderSet.delete('Risotto'); // this removes the string from the set
+
+for (const order of orderSet) console.log(order); // we can use sets in for-of loops because it is iterable
+
+// Example 1
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+const staffSet = new Set(staff);
+console.log(staffSet);
+
+// Example 2 - pushing the set in to an array using spread operator
+const staff1 = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+const staffSet1 = [...new Set(staff1)];
+console.log(staffSet1);
+
+// using sets to determine size using the ".size" command
+console.log(new Set('SeanoSheridan').size);
