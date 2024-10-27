@@ -334,3 +334,28 @@ console.log(staffSet1);
 console.log(new Set('SeanoSheridan').size);
 
 // **** Tutorial 118 - Maps: Fundamentals ****
+
+const resto = new Map();
+resto.set('name', 'Classico Italiano');
+resto.set(1, 'Firenze, Italy');
+console.log(resto.set(2, 'Lisbon, Portugal'));
+
+resto
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open')
+  .set(false, 'We are closed');
+
+console.log(resto.get('name'));
+console.log(resto.get(true));
+console.log(resto.get(1));
+
+console.log(resto.has('categories"'));
+resto.delete(2);
+console.log(resto);
+
+const arrMap = [1, 2];
+resto.set(arrMap, 'Test');
+resto.set(document.querySelector('h1'), 'Heading');
+console.log(resto);
