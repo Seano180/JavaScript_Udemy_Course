@@ -332,3 +332,5 @@ console.log(staffSet1);
 
 // using sets to determine size using the ".size" command
 console.log(new Set('SeanoSheridan').size);
+
+// **** Tutorial 118 - Maps: Fundamentals ****
