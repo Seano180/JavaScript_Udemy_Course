@@ -628,3 +628,13 @@ const uniqueKeywordsArr = [...uniqueKeywords];
 uniqueKeywords.clear();
 console.log(uniqueKeywords);
 
+// **** Tutorial 119 - Maps: Iteration ****
+
+// 14.1 - Convert the first book object from the books array into a Map, and assign it to a firstBookMap variable.
+const firstBookMap = new Map(Object.entries(books[0]));
+
+// 14.2 - Use a for-of loop to iterate over the firstBookMap, and log to the console keys that have numbers as values.
+
+for (const [key, value] of firstBookMap) {
+  if (typeof value === 'number') console.log(key);
+}
